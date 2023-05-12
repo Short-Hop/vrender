@@ -21,3 +21,9 @@ Ideally, calling `vrender.Render()` on any object in memory should print a golan
 ## Fill
 
 Fill is a function that takes in any interface, and fills it with default values.
+
+### To Update:
+- Commit changes
+- Tag version update using command like `git tag v0.1.0`
+- Push changes
+- Run command like `GOPROXY=proxy.golang.org go list -m github.com/vrender@v0.1.0`
