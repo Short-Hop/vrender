@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"math/rand"
 	"reflect"
-	"time"
 )
 
 // Fill fills in values with default or random values
@@ -13,9 +12,6 @@ func Fill(data interface{}, names ...string) {
 	if len(names) > 0 {
 		name = names[0]
 	}
-
-	fmt.Println(reflect.TypeOf(data).String(), name)
-	rand.Seed(time.Now().UnixNano()) // Initialize random seed
 
 	value := reflect.ValueOf(data)
 	if value.Kind() != reflect.Ptr || value.IsNil() {
@@ -59,4 +55,5 @@ func Fill(data interface{}, names ...string) {
 	case reflect.Bool:
 		value.SetBool(rand.Float32() < 0.5) // Set random boolean value
 	}
+
 }

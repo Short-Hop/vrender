@@ -26,4 +26,4 @@ Fill is a function that takes in any interface, and fills it with default values
 - Commit changes
 - Tag version update using command like `git tag v0.1.0`
 - Push changes using `git push origin v0.1.0`
-- Run command like `GOPROXY=proxy.golang.org go list -m github.com/vrender@v0.1.0`
+- On initial publish, run command like `GOPROXY=proxy.golang.org go list -m github.com/vrender@v0.1.0`
